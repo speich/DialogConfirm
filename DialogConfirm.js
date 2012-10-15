@@ -12,15 +12,15 @@ define([
 	 * @class
 	 * @name rfe.DialogConfirm
 	 * @extends {dijit.Dialog}
-	 * @property {dijit.form.Button} okButton
-	 * @property {dijit.form.Button} cancelButton
-	 * @property {dijit.form.CheckBox} skipCheckBox
-	 * @property {boolean} hasOkButton
-	 * @property {boolean} hasCancelButton
-	 * @property {boolean} hasSkipCheckBox
-	 * @property {boolean} hasUnderlay
-	 * @property {dojo.Deferred} dfd
-	 * @property {HTMLDivElement} buttonNode
+	 * @property {dijit.form.Button} okButton reference to OK button
+	 * @property {dijit.form.Button} cancelButton reference to Cancel button
+	 * @property {dijit.form.CheckBox} skipCheckBox reference to skipping check box
+	 * @property {boolean} hasOkButton create an OK button?
+	 * @property {boolean} hasCancelButton create a cancel button
+	 * @property {boolean} hasSkipCheckBox create the skipping check box
+	 * @property {boolean} hasUnderlay create the dialog underlay?
+	 * @property {dojo.Deferred} dfd Deferred
+	 * @property {HTMLDivElement} buttonNode reference to div containing buttons
 	 */
 	return declare(Dialog, /* @lends rfe.DialogConfirm.prototype */ {
 		okButton: null,
