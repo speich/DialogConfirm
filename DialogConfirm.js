@@ -6,7 +6,7 @@ define([
 	'dijit/Dialog',
 	'dijit/form/Button',
 	'dijit/form/CheckBox'
-], function(lang, declare, Deferred, construct, Dialog, Button, Checkbox) {
+], function(lang, declare, Deferred, domConstruct, Dialog, Button, Checkbox) {
 
 	/**
 	 * @class
@@ -50,16 +50,16 @@ define([
 
 			var label, div, remember = false;
 
-			div = construct.create('div', {
+			div = domConstruct.create('div', {
 				className: 'dijitDialogPaneContent dialogConfirm'
 			}, this.domNode, 'last');
 
 			if (this.hasSkipCheckBox) {
 				this.skipCheckBox = new Checkbox({
 					checked: false
-				}, construct.create('div'));
+				}, domConstruct.create('div'));
 				div.appendChild(this.skipCheckBox.domNode);
-				label = construct.create('label', {
+				label = domConstruct.create('label', {
 					'for': this.skipCheckBox.id,
 					innerHTML: 'Remember my decision and do not ask again.<br/>'
 				}, div);
@@ -72,7 +72,7 @@ define([
 						this.hide();
 						this.dfd.resolve(remember);
 					})
-				}, construct.create('div'));
+				}, domConstruct.create('div'));
 				div.appendChild(this.okButton.domNode);
 			}
 			if (this.hasCancelButton) {
@@ -83,7 +83,7 @@ define([
 						this.hide();
 						this.dfd.cancel(remember);
 					})
-				}, construct.create('div'));
+				}, domConstruct.create('div'));
 				div.appendChild(this.cancelButton.domNode);
 			}
 			this.buttonNode = div;
@@ -96,7 +96,7 @@ define([
 		show: function() {
 			this.inherited('show', arguments);
 			if (!this.hasUnderlay) {
-				construct.destroy(this.id + '_underlay');	// remove underlay
+				domConstruct.destroy(this.id + '_underlay');	// remove underlay
 			}
 			this.dfd = new Deferred();
 			return this.dfd;
