@@ -1,0 +1,8 @@
+{
+	"name": "dialog-confirm",
+	"version": "1.0.0",
+	"author": "Simon Speich",
+	"dependencies": {
+		"dojo": "^1.7.11"
+	}
+}
