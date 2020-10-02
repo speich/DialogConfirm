@@ -2,6 +2,7 @@
 	"name": "dialog-confirm",
 	"version": "1.0.0",
 	"author": "Simon Speich",
+	"homepage": "https://www.speich.net/articles/dojo-confirmdialog.php",
 	"dependencies": {
 		"dojo": "^1.7.11"
 	}
