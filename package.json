@@ -4,6 +4,7 @@
 	"author": "Simon Speich",
 	"homepage": "https://www.speich.net/articles/dojo-confirmdialog.php",
 	"dependencies": {
-		"dojo": "^1.7.11"
+		"dojo": "^1.17.2",
+		"dijit": "^1.17.2"
 	}
 }
